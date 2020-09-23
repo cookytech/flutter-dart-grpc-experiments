@@ -1,0 +1,24 @@
+version: '3'
+services: 
+    backend:
+        image: ubuntu:latest
+        volumes: 
+            - ./backend/bin:/home/app
+        working_dir: /home/app
+        ports: 
+            - 2345:2345
+        command: ./backend
+
+    # flutter_web:
+    #     image: "node:14-alpine"
+    #     user: "node"
+    #     working_dir: /home/node/app
+    #     environment:
+    #         - NODE_ENV=development
+    #     volumes:
+    #         - ./cba-nextjs:/home/node/app
+    #     ports:
+    #         - "3000:3000"
+    #     links:
+    #         - "strapi:backend"
+    #     command: sh -c "yarn; yarn dev;"

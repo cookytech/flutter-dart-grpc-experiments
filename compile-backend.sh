@@ -1,0 +1,1 @@
+dart2native backend/bin/backend.dart -o backend/bin/backend       
